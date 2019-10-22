@@ -1,0 +1,11 @@
+<button type="button" class="btn btn-primary" (click)="onToggle()">
+  Display details
+</button>
+<p *ngIf="showParagraph">Secret Password = tuna</p>
+<p
+  *ngFor="let no of clicksNumbersArr; let i = index"
+  [ngStyle]="{ backgroundColor: no >= 4 && 'blue' }"
+  [ngClass]="{ 'font-white': no >= 4 }"
+>
+  Click number is: {{ no }}
+</p>
